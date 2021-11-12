@@ -21,7 +21,16 @@ const iterableObj = {
 }
 
 for (val of iterableObj) {
-  console.log(val)
+  console.log(val) //first, second and third
 }
 
-//first, second and third
+// same version but with generator functions
+const _iterableObj = function* () {
+  yield "first"
+  yield "second"
+  yield "third"
+}
+
+for (val of _iterableObj()) {
+  console.log(val) //first, second, third
+}
